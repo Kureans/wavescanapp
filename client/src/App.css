@@ -1,0 +1,44 @@
+.App {
+    background-color: rgb(17, 15, 15);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ProjectFormContainer {
+    height: 80%;
+    width: 30%;
+    border-radius: 2%;
+    padding: 2%;
+    background-color: darkslategrey;
+    margin-bottom: 5%;
+    color:azure;
+}
+
+.ScannedImageContainer {
+    height: 80%;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+
+.HeaderContainer {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.HeaderLogoContainer {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.HeaderLogo {
+    margin-top: 2%;
+    margin-left: 2%;
+    height: 35px;
+    width: 120px;
+}

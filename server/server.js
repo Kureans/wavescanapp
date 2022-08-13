@@ -1,21 +1,19 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
 const port = 5000;
 
 const validators = require('./validators');
 
 app.use(express.json());
-
-app.get('/', (req, res) => {
-    return res.send("Hello World");
-});
+app.use(cors());
 
 app.get('/image', (req, res) => {
     return res.sendFile(path.resolve('./ScannedImage.png'));
 });
 
-app.post('/', (req, res) => {
+app.post('/form', (req, res) => {
     const { 
         projectName, 
         scanningMode, 
