@@ -1,7 +1,6 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://kureans.github.io/wavescanapp/",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
