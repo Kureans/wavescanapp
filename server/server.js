@@ -9,6 +9,10 @@ const validators = require("./validators");
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  return res.send("This is the wavescan app backend.");
+});
+
 app.get("/image", (req, res) => {
   return res.sendFile(path.resolve("./ScannedImage.png"));
 });
