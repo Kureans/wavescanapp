@@ -42,3 +42,7 @@
     height: 35px;
     width: 120px;
 }
+
+.ErrorMessage {
+    margin-top: 5%;
+}

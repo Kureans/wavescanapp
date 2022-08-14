@@ -34,7 +34,7 @@ function ProjectForm() {
           scannerFrequency: scannerFrequency,
         }),
       });
-      
+
       let resJson = await res.json();
 
       console.log(resJson);
@@ -82,13 +82,17 @@ function ProjectForm() {
           <Form.Control
             type="text"
             placeholder="Enter Project Name"
+            value={projectName}
             onChange={(e) => setProjectName(e.target.value)}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formScanningMode">
           <Form.Label>Scanning Mode</Form.Label>
-          <Form.Select onChange={(e) => setScanningMode(e.target.value)}>
+          <Form.Select
+            value={scanningMode}
+            onChange={(e) => setScanningMode(e.target.value)}
+          >
             <option value="GANTRY">Gantry</option>
             <option value="CRAWLER">Crawler</option>
             <option value="AUTO">Auto</option>
@@ -108,6 +112,7 @@ function ProjectForm() {
                 <Form.Control
                   type="text"
                   placeholder=""
+                  value={scanDimensionX}
                   onChange={(e) => setScanDimensionX(e.target.value)}
                 />
               </Col>
@@ -118,6 +123,7 @@ function ProjectForm() {
                 <Form.Control
                   type="text"
                   placeholder=""
+                  value={scanDimensionY}
                   onChange={(e) => setScanDimensionY(e.target.value)}
                 />
               </Col>
@@ -130,6 +136,7 @@ function ProjectForm() {
           <Form.Control
             type="text"
             placeholder="Enter Scanner Frequency"
+            value={scannerFrequency}
             onChange={(e) => setScannerFrequency(e.target.value)}
           />
         </Form.Group>
@@ -140,7 +147,9 @@ function ProjectForm() {
         </div>
       </Form>
       {errorMessage && !isValidSubmission && (
-        <Alert variant="danger">{errorMessage}</Alert>
+        <Alert className="ErrorMessage" variant="danger">
+          {errorMessage}
+        </Alert>
       )}
     </div>
   );
